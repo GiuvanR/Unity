@@ -16,12 +16,12 @@ jobs:
     - name: install_packages
       run: "sudo apt-get update; sudo apt-get -y install cppcheck-gui cppcheck clang valgrind"
     - name: cppcheck
-      run: "cd app; make cppcheck"
+      run: "cd examples/t1; make cppcheck"
     - name: make
-      run: "cd app; make"
+      run: "cd examples/t1; make"
     - name: cov
-      run: "cd app; make cov"
+      run: "cd examples/t1; make cov"
     - name: valgrind
-      run: "cd app; make valgrind"
+      run: "cd examples/t1; make valgrind"
     - name: sanitizer
-      run: "cd app; make sanitizer"
+      run: "cd examples/t1; make sanitizer"
