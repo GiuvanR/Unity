@@ -9,19 +9,19 @@ on:
 jobs:
   build:
 
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
-  - uses: actions/checkout@v3
-  - name: install_packages
-    run: "sudo apt-get update; sudo apt-get -y install cppcheck-gui cppcheck clang valgrind"
-  - name: cppcheck
-    run: "cd app; make cppcheck"
-  - name: make
-    run: "cd app; make"
-  - name: cov
-    run: "cd app; make cov"
-  - name: valgrind
-    run: "cd app; make valgrind"
-  - name: sanitizer
-    run: "cd app; make sanitizer"
+    steps:
+    - uses: actions/checkout@v3
+    - name: install_packages
+      run: "sudo apt-get update; sudo apt-get -y install cppcheck-gui cppcheck clang valgrind"
+    - name: cppcheck
+      run: "cd app; make cppcheck"
+    - name: make
+      run: "cd app; make"
+    - name: cov
+      run: "cd app; make cov"
+    - name: valgrind
+      run: "cd app; make valgrind"
+    - name: sanitizer
+      run: "cd app; make sanitizer"
