@@ -20,10 +20,10 @@ jobs:
 #      run: make
 
     - name: all
-      run: make all
+      run: "cd examples/t1"; make all
 
     - name: cppcheck
-      run: make cppcheck"
+      run: "cd examples/t1"; make cppcheck"
 
     - name: make
       run: "cd examples/t1; make"
