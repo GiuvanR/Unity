@@ -60,9 +60,6 @@ SRC_FILES1=\
   src/selection_sort.c \
   src/sort.c \
   src/TestSort.c \
-  src/TestSort_Runner.c \
-  src/all_tests.c
-  src/sort.c \
   test/test_runners/TestSort_Runner.c \
   test/test_runners/all_tests.c
 
