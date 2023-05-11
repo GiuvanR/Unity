@@ -48,20 +48,20 @@ TARGET_BASE1=testes
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 
 SRC_FILES1=\
-  src/unity.c \
-  extras/fixture/src/unity_fixture.c \
-  examples/t1/src/bubble_sort.c \
-  examples/t1/src/counting_sort.c \
-  examples/t1/src/heap_sort.c \
-  examples/t1/src/insertion_sort.c \
-  examples/t1/src/merge_sort.c \
-  examples/t1/src/quick_sort.c \
-  examples/t1/src/radix_sort.c \
-  examples/t1/src/selection_sort.c \
-  examples/t1/src/sort.c \
-  examples/t1/test/TestSort.c \
-  examples/t1/test/test_runners/TestSort_Runner.c \
-  examples/t1/test/test_runners/all_tests.c
+  $(UNITY_ROOT)/src/unity.c \
+  $(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
+  src/bubble_sort.c \
+  src/counting_sort.c \
+  src/heap_sort.c \
+  src/insertion_sort.c \
+  src/merge_sort.c \
+  src/quick_sort.c \
+  src/radix_sort.c \
+  src/selection_sort.c \
+  src/sort.c \
+  test/TestSort.c \
+  test/test_runners/TestSort_Runner.c \
+  test/test_runners/all_tests.c
 
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 
@@ -92,7 +92,7 @@ run:
 	./$(TARGET1) -v
 
 clean:
-	$(CLEANUP) $(TARGET1) *.gc*
+	rm -fr $(TARGET) *.gcno *.gcda *.gcov *.dSYM
 
 ci: CFLAGS += -Werror
 ci: compile
