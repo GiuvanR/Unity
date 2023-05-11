@@ -13,7 +13,7 @@ TEST_TEAR_DOWN(Sort)
 {
 }
 
-/* TEST(Sort, LimiteInferiorDentro)
+TEST(Sort, LimiteInferiorDentro)
 {
     int b[] = {22, 17};
     int b1[] = {17, 22};
@@ -35,4 +35,4 @@ TEST(Sort, LimiteSuperiorDentro)
   int d1[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 17, 19, 20, 384, 495, 1000, 1968, 8945, 15000};
   TEST_ASSERT_EQUAL(0, sort(d, 20, (char *)"On", COUNTING));
   TEST_ASSERT_EQUAL_INT32_ARRAY(d1, d, 20);
-} */
+}
