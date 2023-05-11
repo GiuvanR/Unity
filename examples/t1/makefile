@@ -92,7 +92,7 @@ run:
 	./$(TARGET1) -v
 
 clean:
-	$(CLEANUP) $(TARGET) *.gcno *.gcda *.gcov *.dSYM
+	$(CLEANUP) $(TARGET) *.gcno *.gcda *.gcov *.dSYM *.gc*
 
 ci: CFLAGS += -Werror
 ci: compile
