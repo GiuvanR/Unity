@@ -16,8 +16,8 @@ jobs:
     - name: install_packages
       run: "sudo apt-get update; sudo apt-get -y install cppcheck-gui cppcheck clang valgrind"
 
-#    - name: make
-#      run: make
+    - name: make
+      run: make
 
     - name: all
       run: "cd examples/t1"; make all
