@@ -36,3 +36,24 @@ TEST(Sort, LimiteSuperiorDentro)
   TEST_ASSERT_EQUAL(0, sort(d, 20, (char *)"On", COUNTING));
   TEST_ASSERT_EQUAL_INT32_ARRAY(d1, d, 20);
 }
+
+
+TEST(Sort, LimiteSuperiorFora)
+{
+  int e[] = {7, 8, 20, 3, 19, 15, 17, 2, 6, 384, 495, 4, 1, 1000, 8945, 5, 0, 1968, 15000, 9, 47};
+  TEST_ASSERT_EQUAL(1, sort(e, 21, (char *)"On", COUNTING));
+}
+
+TEST(Sort, ValorIntermediarioLength)
+{
+  int a[] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+  int a1[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+  TEST_ASSERT_EQUAL(0, sort(a, 10, (char *)"On", COUNTING));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(a1, a, 10);
+}
+
+TEST(Sort, TypeErradoCounting)
+{
+  int a[] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+  TEST_ASSERT_EQUAL(1, sort(a, 10, (char *)"On2", COUNTING));
+}
