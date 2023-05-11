@@ -43,7 +43,7 @@ CFLAGS += -Wundef
 CFLAGS += -Wold-style-definition
 CFLAGS += -fprofile-arcs -ftest-coverage
 
-TARGET_BASE1=all_tests
+TARGET_BASE1=testes
 
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 
