@@ -68,10 +68,10 @@ INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
 
 all: 
-	compile run
+	clean compile run
 
 compile:
-	$(GCC_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
+	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
 
 cppcheck:
 	cppcheck --enable=all --suppress=missingIncludeSystem --suppress=unusedFunction $(INC_DIRS) $(SRC_FILES1)
@@ -94,3 +94,6 @@ run:
 
 clean:
 	rm -fr $(TARGET1) *.gcno *.gcda *.gcov *.dSYM
+
+ci: CFLAGS += -Werror
+ci: compile
