@@ -48,8 +48,8 @@ TARGET_BASE1=all_tests
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 
 SRC_FILES1=\
-  $(UNITY_ROOT)/src/unity.c \
-  $(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
+  src/unity.c \
+  extras/fixture/src/unity_fixture.c \
   examples/t1/src/bubble_sort.c \
   examples/t1/src/counting_sort.c \
   examples/t1/src/heap_sort.c \

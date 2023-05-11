@@ -23,16 +23,13 @@ jobs:
       run: make all
 
     - name: cppcheck
-      run: "cd examples/t1"; make cppcheck"
-
-    - name: make
-      run: "cd examples/t1; make"
+      run: make cppcheck
 
     - name: cov
-      run: "cd examples/t1; make cov"
+      run: make cov
 
     - name: valgrind
-      run: "cd examples/t1; make valgrind"
+      run: make valgrind
 
     - name: sanitizer
-      run: "cd examples/t1; make sanitizer"
+      run: make sanitizer
