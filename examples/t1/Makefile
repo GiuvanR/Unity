@@ -94,4 +94,3 @@ run:
 
 clean:
 	rm -fr $(TARGET1) *.gcno *.gcda *.gcov *.dSYM
-	rm -f app
