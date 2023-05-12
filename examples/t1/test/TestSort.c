@@ -328,3 +328,59 @@ TEST(Sort, ListaComValorUnicoQuick){
   TEST_ASSERT_EQUAL(0, sort(m, 5, (char *)"Onlogn", QUICK));
   TEST_ASSERT_EQUAL_INT32_ARRAY(m1, m, 5);
 }
+
+TEST(Sort, ListaOrdenadaCounting){
+  int n[] = {0, 1, 2, 3, 4};
+  int n1[] = {0, 1, 2, 3, 4};
+  TEST_ASSERT_EQUAL(0, sort(n, 5, (char *)"On", COUNTING));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(n1, n, 5);
+}
+
+TEST(Sort, ListaOrdenadaRadix){
+  int n[] = {0, 1, 2, 3, 4};
+  int n1[] = {0, 1, 2, 3, 4};
+  TEST_ASSERT_EQUAL(0, sort(n, 5, (char *)"On", RADIX));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(n1, n, 5);
+}
+
+TEST(Sort, ListaOrdenadaBubble){
+  int n[] = {0, 1, 2, 3, 4};
+  int n1[] = {0, 1, 2, 3, 4};
+  TEST_ASSERT_EQUAL(0, sort(n, 5, (char *)"On2", BUBBLE));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(n1, n, 5);
+}
+
+TEST(Sort, ListaOrdenadaInsertion){
+  int n[] = {0, 1, 2, 3, 4};
+  int n1[] = {0, 1, 2, 3, 4};
+  TEST_ASSERT_EQUAL(0, sort(n, 5, (char *)"On2", INSERTION));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(n1, n, 5);
+}
+
+TEST(Sort, ListaOrdenadaSelection){
+  int n[] = {0, 1, 2, 3, 4};
+  int n1[] = {0, 1, 2, 3, 4};
+  TEST_ASSERT_EQUAL(0, sort(n, 5, (char *)"On2", SELECTION));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(n1, n, 5);
+}
+
+TEST(Sort, ListaOrdenadaHeap){
+  int n[] = {0, 1, 2, 3, 4};
+  int n1[] = {0, 1, 2, 3, 4};
+  TEST_ASSERT_EQUAL(0, sort(n, 5, (char *)"Onlogn", HEAP));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(n1, n, 5);
+}
+
+TEST(Sort, ListaOrdenadaMerge){
+  int n[] = {0, 1, 2, 3, 4};
+  int n1[] = {0, 1, 2, 3, 4};
+  TEST_ASSERT_EQUAL(0, sort(n, 5, (char *)"Onlogn", MERGE));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(n1, n, 5);
+}
+
+TEST(Sort, ListaOrdenadaQuick){
+  int n[] = {0, 1, 2, 3, 4};
+  int n1[] = {0, 1, 2, 3, 4};
+  TEST_ASSERT_EQUAL(0, sort(n, 5, (char *)"Onlogn", QUICK));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(n1, n, 5);
+}
