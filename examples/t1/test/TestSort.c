@@ -162,3 +162,18 @@ TEST(Sort, TestDefault)
   int a[] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
   TEST_ASSERT_EQUAL(1, sort(a, 10, (char *)"On", 9));
 }
+
+TEST(Sort, LengthMaiorQueVetor)
+{
+  int b[] = {22, 17};
+  int b1[] = {17, 22};
+  TEST_ASSERT_EQUAL(0, sort(b, 15, (char *)"On", COUNTING));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(b1, b, 2);
+}
+
+TEST(Sort, LengthMenorQueVetor)
+{
+  int d[] = {7, 8, 20, 3, 19, 15, 17, 2, 6, 384, 495, 4, 1, 1000, 8945, 5, 0, 1968, 15000, 9};
+  TEST_ASSERT_EQUAL(0, sort(d, 2, (char *)"On", COUNTING));
+}
+

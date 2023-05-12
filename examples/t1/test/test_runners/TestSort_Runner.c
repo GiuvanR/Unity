@@ -24,4 +24,6 @@ TEST_GROUP_RUNNER(Sort)
   RUN_TEST_CASE(Sort, TestQuickCorreto);
   RUN_TEST_CASE(Sort, TypeErradoQuick);
   RUN_TEST_CASE(Sort, TestDefault);
+  //RUN_TEST_CASE(Sort, LengthMaiorQueVetor);
+  RUN_TEST_CASE(Sort, LengthMenorQueVetor);
 }
