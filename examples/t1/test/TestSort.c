@@ -216,3 +216,59 @@ TEST(Sort, ListaVaziaQuick){
   int j[] = {};
   TEST_ASSERT_EQUAL(1, sort(j, 0, (char *)"Onlogn", QUICK));
 }
+
+TEST(Sort, ListaComValorRepetidoCounting){
+  int l[] = {32000, 0, 0, 32000, 74};
+  int l1[] = {0, 0, 74, 32000, 32000};
+  TEST_ASSERT_EQUAL(0, sort(l, 5, (char *)"On", COUNTING));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(l1, l, 5);
+}
+
+TEST(Sort, ListaComValorRepetidoRadix){
+  int l[] = {32000, 0, 0, 32000, 74};
+  int l1[] = {0, 0, 74, 32000, 32000};
+  TEST_ASSERT_EQUAL(0, sort(l, 5, (char *)"On", RADIX));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(l1, l, 5);
+}
+
+TEST(Sort, ListaComValorRepetidoBubble){
+  int l[] = {32000, 0, 0, 32000, 74};
+  int l1[] = {0, 0, 74, 32000, 32000};
+  TEST_ASSERT_EQUAL(0, sort(l, 5, (char *)"On2", BUBBLE));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(l1, l, 5);
+}
+
+TEST(Sort, ListaComValorRepetidoInsertion){
+  int l[] = {32000, 0, 0, 32000, 74};
+  int l1[] = {0, 0, 74, 32000, 32000};
+  TEST_ASSERT_EQUAL(0, sort(l, 5, (char *)"On2", INSERTION));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(l1, l, 5);
+}
+
+TEST(Sort, ListaComValorRepetidoSelection){
+  int l[] = {32000, 0, 0, 32000, 74};
+  int l1[] = {0, 0, 74, 32000, 32000};
+  TEST_ASSERT_EQUAL(0, sort(l, 5, (char *)"On2", SELECTION));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(l1, l, 5);
+}
+
+TEST(Sort, ListaComValorRepetidoHeap){
+  int l[] = {32000, 0, 0, 32000, 74};
+  int l1[] = {0, 0, 74, 32000, 32000};
+  TEST_ASSERT_EQUAL(0, sort(l, 5, (char *)"Onlogn", HEAP));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(l1, l, 5);
+}
+
+TEST(Sort, ListaComValorRepetidoMerge){
+  int l[] = {32000, 0, 0, 32000, 74};
+  int l1[] = {0, 0, 74, 32000, 32000};
+  TEST_ASSERT_EQUAL(0, sort(l, 5, (char *)"Onlogn", MERGE));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(l1, l, 5);
+}
+
+TEST(Sort, ListaComValorRepetidoQuick){
+  int l[] = {32000, 0, 0, 32000, 74};
+  int l1[] = {0, 0, 74, 32000, 32000};
+  TEST_ASSERT_EQUAL(0, sort(l, 5, (char *)"Onlogn", QUICK));
+  TEST_ASSERT_EQUAL_INT32_ARRAY(l1, l, 5);
+}
