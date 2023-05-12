@@ -45,5 +45,14 @@ TEST_GROUP_RUNNER(Sort)
   RUN_TEST_CASE(Sort, ListaComValorRepetidoMerge);
   RUN_TEST_CASE(Sort, ListaComValorRepetidoQuick);
 
+  RUN_TEST_CASE(Sort, ListaComValorUnicoCounting);
+  RUN_TEST_CASE(Sort, ListaComValorUnicoRadix);
+  RUN_TEST_CASE(Sort, ListaComValorUnicoBubble);
+  RUN_TEST_CASE(Sort, ListaComValorUnicoInsertion);
+  RUN_TEST_CASE(Sort, ListaComValorUnicoSelection);
+  RUN_TEST_CASE(Sort, ListaComValorUnicoHeap);
+  RUN_TEST_CASE(Sort, ListaComValorUnicoMerge);
+  RUN_TEST_CASE(Sort, ListaComValorUnicoQuick);
+
   
 }
