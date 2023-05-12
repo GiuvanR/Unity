@@ -177,3 +177,42 @@ TEST(Sort, LengthMenorQueVetor)
   TEST_ASSERT_EQUAL(0, sort(d, 2, (char *)"On", COUNTING));
 }
 
+TEST(Sort, ListaVaziaCounting){
+  int j[] = {};
+  TEST_ASSERT_EQUAL(1, sort(j, 0, (char *)"On", COUNTING));
+}
+
+TEST(Sort, ListaVaziaRadix){
+  int j[] = {};
+  TEST_ASSERT_EQUAL(1, sort(j, 0, (char *)"On", RADIX));
+}
+
+TEST(Sort, ListaVaziaBubble){
+  int j[] = {};
+  TEST_ASSERT_EQUAL(1, sort(j, 0, (char *)"On2", BUBBLE));
+}
+
+TEST(Sort, ListaVaziaInsertion){
+  int j[] = {};
+  TEST_ASSERT_EQUAL(1, sort(j, 0, (char *)"On2", INSERTION));
+}
+
+TEST(Sort, ListaVaziaSelection){
+  int j[] = {};
+  TEST_ASSERT_EQUAL(1, sort(j, 0, (char *)"On2", SELECTION));
+}
+
+TEST(Sort, ListaVaziaHeap){
+  int j[] = {};
+  TEST_ASSERT_EQUAL(1, sort(j, 0, (char *)"Onlogn", HEAP));
+}
+
+TEST(Sort, ListaVaziaMerge){
+  int j[] = {};
+  TEST_ASSERT_EQUAL(1, sort(j, 0, (char *)"Onlogn", MERGE));
+}
+
+TEST(Sort, ListaVaziaQuick){
+  int j[] = {};
+  TEST_ASSERT_EQUAL(1, sort(j, 0, (char *)"Onlogn", QUICK));
+}

@@ -26,4 +26,13 @@ TEST_GROUP_RUNNER(Sort)
   RUN_TEST_CASE(Sort, TestDefault);
   //RUN_TEST_CASE(Sort, LengthMaiorQueVetor);
   RUN_TEST_CASE(Sort, LengthMenorQueVetor);
+ 
+  RUN_TEST_CASE(Sort, ListaVaziaCounting);
+  RUN_TEST_CASE(Sort, ListaVaziaRadix);
+  RUN_TEST_CASE(Sort, ListaVaziaBubble);
+  RUN_TEST_CASE(Sort, ListaVaziaInsertion);
+  RUN_TEST_CASE(Sort, ListaVaziaSelection);
+  RUN_TEST_CASE(Sort, ListaVaziaHeap);
+  RUN_TEST_CASE(Sort, ListaVaziaMerge);
+  RUN_TEST_CASE(Sort, ListaVaziaQuick);
 }
